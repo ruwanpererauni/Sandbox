@@ -92,6 +92,7 @@ uprint(Japan)
 uprint(UK)
 uprint(USA)
 uprint(India)
+#testing remote updates
 #print(user.name)
 #print(user.lang)
 #print(user.default_profile_image)
