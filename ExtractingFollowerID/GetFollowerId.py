@@ -1,3 +1,4 @@
+
 '''
 Created on 17 Nov 2017
 
@@ -57,27 +58,27 @@ for w in user:
             if 'india' in word.lower():
                 India.append(w.screen_name)
                 TimesOfAppearenceIND +=1
-                uprint('TimesOfAppearenceIND',TimesOfAppearenceIND)
+#                uprint('TimesOfAppearenceIND',TimesOfAppearenceIND)
             else :
                 if 'uk' in word.lower():
                     UK.append(w.screen_name)
                     TimesOfAppearenceUK +=1
-                    uprint('TimesOfAppearenceUK',TimesOfAppearenceUK)
+#                   uprint('TimesOfAppearenceUK',TimesOfAppearenceUK)
                 else :
                     if 'china' in word.lower():
                         China.append(w.screen_name)
                         TimesOfAppearenceCHINA +=1
-                        uprint('TimesOfAppearenceCHINA',TimesOfAppearenceCHINA)
+#                        uprint('TimesOfAppearenceCHINA',TimesOfAppearenceCHINA)
                     else :
                         if 'jp' in word.lower():
                             Japan.append(w.screen_name)
                             TimesOfAppearenceJP +=1
-                            uprint('TimesOfAppearenceJP',TimesOfAppearenceJP)
+#                            uprint('TimesOfAppearenceJP',TimesOfAppearenceJP)
                         else :
                             if 'usa' in word.lower():
                                 USA.append(w.screen_name)
                                 TimesOfAppearenceUSA +=1
-                                uprint('TimesOfAppearenceUSA',TimesOfAppearenceUSA)
+#                                uprint('TimesOfAppearenceUSA',TimesOfAppearenceUSA)
 
 
 uprint(friend_count)
@@ -87,75 +88,68 @@ uprint('TimesOfAppearenceCHINA',TimesOfAppearenceCHINA)
 uprint('TimesOfAppearenceUSA',TimesOfAppearenceUSA)
 uprint('TimesOfAppearenceJP',TimesOfAppearenceJP)
 uprint(India)#user = api.GetUser(user_id = 937364378055196672)
-uprint(China)
-uprint(Japan)
-uprint(UK)
-uprint(USA)
-uprint(India)
+#uprint(China)
+#uprint(Japan)
+#uprint(UK)
+#uprint(USA)
+#uprint(India)
 uprint(TimesOfAppearenceIND)
-uprint(India[0])
 
 for k in range(len(India)):
+    TimesOfAppearenceIND = 0
     user = api.GetFriends(screen_name = India[k])
+    uprint('name',India[k])
     friend_count = len(user)
-    uprint(friend_count)
+    uprint('friend count',friend_count)
     for w in user:
         if w.name == "":
             uprint("finish")
         else:
         #uprint(w.name, w.id, w.lang, w.screen_name, w.location, w.created_at, w.geo_enabled)
-            uprint(w.name,w.screen_name, w.lang, w.location)
+#           uprint(w.name,w.screen_name, w.lang, w.location)
             list_of_words = w.location.split()
 #    if w.location == "India":
             for word in list_of_words:
                 if 'india' in word.lower():
                     India.append(w.screen_name)
                     TimesOfAppearenceIND +=1
-                    uprint('TimesOfAppearenceIND',TimesOfAppearenceIND)
+#                   uprint('TimesOfAppearenceIND',TimesOfAppearenceIND)
                 else :
                     if 'uk' in word.lower():
                         UK.append(w.screen_name)
                         TimesOfAppearenceUK +=1
-                        uprint('TimesOfAppearenceUK',TimesOfAppearenceUK)
+#                       uprint('TimesOfAppearenceUK',TimesOfAppearenceUK)
                     else :
                         if 'china' in word.lower():
                             China.append(w.screen_name)
                             TimesOfAppearenceCHINA +=1
-                            uprint('TimesOfAppearenceCHINA',TimesOfAppearenceCHINA)
+#                           uprint('TimesOfAppearenceCHINA',TimesOfAppearenceCHINA)
                         else :
                             if 'jp' in word.lower():
                                 Japan.append(w.screen_name)
                                 TimesOfAppearenceJP +=1
-                                uprint('TimesOfAppearenceJP',TimesOfAppearenceJP)
+#                                uprint('TimesOfAppearenceJP',TimesOfAppearenceJP)
                             else :
                                 if 'usa' in word.lower():
                                     USA.append(w.screen_name)
                                     TimesOfAppearenceUSA +=1
-                                    uprint('TimesOfAppearenceUSA',TimesOfAppearenceUSA)
+#                                   uprint('TimesOfAppearenceUSA',TimesOfAppearenceUSA)
 
-
-uprint(friend_count)
-uprint('TimesOfAppearenceIND',TimesOfAppearenceIND)
+    uprint('TimesOfAppearenceIND',TimesOfAppearenceIND)
 uprint('TimesOfAppearenceUK',TimesOfAppearenceUK)
 uprint('TimesOfAppearenceCHINA',TimesOfAppearenceCHINA)
 uprint('TimesOfAppearenceUSA',TimesOfAppearenceUSA)
 uprint('TimesOfAppearenceJP',TimesOfAppearenceJP)
-uprint(India)#user = api.GetUser(user_id = 937364378055196672)
-uprint(China)
-uprint(Japan)
-uprint(UK)
-uprint(USA)
-uprint(India)
+#uprint(India)#user = api.GetUser(user_id = 937364378055196672)
+#uprint(China)
+#uprint(Japan)
+#uprint(UK)
+#uprint(USA)
 uprint(TimesOfAppearenceIND)
-uprint(India[0])
+uprint(India)
 #print(user.name)
 #print(user.lang)
 #print(user.default_profile_image)
-
-#testtest
-#test22
-# test33
-# test34
 
 
 
@@ -177,10 +171,4 @@ uprint(India[0])
 #GET https://api.twitter.com/1.1/followers/ids.json?cursor=-1&screen_name=andypiper&count=5000
 
 #test changes at origin and pulling at desk top
-<<<<<<< HEAD
-#test4
-#test55
-#test66
-=======
-#test case 4
->>>>>>> branch 'master' of https://github.com/ruwanpererauni/Sandbox.git
+
